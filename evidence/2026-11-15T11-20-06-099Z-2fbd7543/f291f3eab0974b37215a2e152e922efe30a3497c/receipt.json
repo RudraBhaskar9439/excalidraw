@@ -1,0 +1,26 @@
+{
+  "id": "2026-11-15T11-20-06-099Z-2fbd7543",
+  "base": "3a317b55f508815d10a4c12acca99df30f026521",
+  "head": "f291f3eab0974b37215a2e152e922efe30a3497c",
+  "beforePassed": false,
+  "afterPassed": true,
+  "checks": [
+    {
+      "command": "PATH=/opt/homebrew/opt/node@22/bin:$PATH node_modules/.bin/tsc --noEmit",
+      "code": 0
+    },
+    {
+      "command": "PATH=/opt/homebrew/opt/node@22/bin:$PATH node_modules/.bin/eslint --max-warnings=0 --ext .js,.ts,.tsx .",
+      "code": 0
+    },
+    {
+      "command": "PATH=/opt/homebrew/opt/node@22/bin:$PATH node_modules/.bin/vitest run packages/excalidraw/tests/multiPointCreate.test.tsx packages/excalidraw/tests/arrowBinding.test.tsx packages/excalidraw/tests/tool.test.tsx packages/excalidraw/tests/toolDrag.test.tsx packages/excalidraw/tests/interactivity.test.tsx packages/excalidraw/tests/history.test.tsx packages/element/tests/linearElementEditor.test.tsx --maxWorkers=1 --minWorkers=1",
+      "code": 0
+    }
+  ],
+  "review": {
+    "verdict": "pass",
+    "summary": "No actionable defects found in the full diff, affected callers, binding cleanup, or regression coverage. Supplied checks passed, including 265 tests. Screenshots, trace, and logs support the recorded mouse journey. Additional runtime probes were sandbox-blocked; broader interaction coverage remains unverified. Working tree unchanged.",
+    "findings": []
+  }
+}
